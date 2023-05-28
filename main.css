@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@font-face {font-family: "Tilda Sans";
+    src: url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.eot"); /* IE9*/
+    src: url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.woff2") format("woff2"), /* chrome、firefox */
+    url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.woff") format("woff"), /* chrome、firefox */
+    url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("fonts/TildaSans/30aaff8bab312adfd29944c9cfb18158.svg#Tilda Sans") format("svg"); /* iOS 4.1- */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #202020;
+    color: #5F5F5F;
+    font-size: 14px;
+}
+.container {
+    display: flex;
+}
+.sidebar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*width: 331px;*/
+    width: 22%;
+    background-color: #202020;
+    height: 100vh;
+}
+.logo {
+    display: flex;
+    align-items: end;
+    position: relative;
+    width: 110px;
+    margin-bottom: 35px;
+    margin-top: 24px;
+}
+.logo-text {
+    position: absolute;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    right: 0;
+    bottom: 13%;
+}
+.create-folder {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #5E5E5E;
+    border-radius: 5px;
+    background-color: #202020;
+    width: 180px;
+    height: 41px;
+    margin-top: 64px;
+}
+.create-folder:hover {
+    background-color: #262626;
+}
+.create-folder p {
+    padding-left: 7px;
+}
+#article {
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    width: 66%;
+    height: 100vh;
+    color: #CCCCCC;
+    padding: 72px 72px 0 72px;
+
+    /*-webkit-box-shadow: -5px 0 31px -10px rgba(0,0,0,0.15);*/
+    /*-moz-box-shadow: -5px 0 31px -10px rgba(0,0,0,0.15);*/
+    /*box-shadow: -5px 0 31px -10px rgba(0,0,0,0.15);*/
+}
+.article-header {
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 35px;
+}
+.sidebar-right {
+    width: 22%;
+}
+.stash {
+    width: 100%;
+    padding-left: 1.6em;
+    padding-bottom: 0.4em;
+}
+.CodeMirror {
+    font-size: 18px;
+    font-family: 'Tilda Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+.CodeMirror-line {
+    background-color: #272727 !important;
+}
+.CodeMirror, .editor-preview {
+    background-color: #272727;
+    border: none;
+    color: #CCCCCC;
+}
+.CodeMirror-selectedtext {
+    background-color: #494949 !important;
+}
+.CodeMirror-cursor {
+    border-left: 1px solid #CCCCCC;
+}
+#header {
+    margin-bottom: 20px;
+}
+.cm-header {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4em !important;
+}
+
+/**
+ * SCROLLBAR
+ */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #202020;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="simplemde.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="tree.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-left">
+            <div class="logo">
+                <img src="icons/dark/T_icon.svg" alt="logo">
+                <h2 class="logo-text">he Poster</h2>
+            </div>
+
+<!--            <p class="stash">Хранилище</p>-->
+
+            <div id="tree"></div>
+
+            <div class="create-folder">
+                <img src="icons/dark/edit.svg" alt="edit">
+                <p>Создать папку</p>
+            </div>
+        </div>
+
+        <div id="article">
+            <textarea id="text" class="text" style="display: none" placeholder="Проба пера..."></textarea>
+        </div>
+
+        <div class="sidebar-right">
+
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="simplemde.min.js"></script>
+    <script>
+        //
+        // https://github.com/sparksuite/simplemde-markdown-editor
+        //
+        const simplemde = new SimpleMDE({
+            element: document.getElementById("text"),
+            toolbar: false,
+            forceSync: true,
+            autofocus: true,
+            // promptURLs: true,
+            spellChecker: false,
+            toolbarTips: false,
+            status: false,
+            placeholder: "Проба пера...",
+            autosave: {
+                enabled: true,
+                uniqueId: "MyUniqueID",
+                delay: 1000,
+            },
+        });
+    </script>
+    <script src="tree.js"></script>
+</footer>
+</html>
