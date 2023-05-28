@@ -5,10 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="simplemde.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="tree.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="libs/simplemde.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tree.css">
+    <title>The Poster</title>
 </head>
 <body>
     <div class="container">
@@ -38,7 +38,9 @@
     </div>
 </body>
 <footer>
-    <script src="simplemde.min.js"></script>
+    <script src="libs/simplemde.min.js"></script>
+    <script src="data.js"></script>
+    <script src="tree.js"></script>
     <script>
         //
         // https://github.com/sparksuite/simplemde-markdown-editor
@@ -59,7 +61,26 @@
                 delay: 1000,
             },
         });
+
+        const treeConfig = {
+            main: {
+                treeId: 'tree',
+                hideFolders: false,
+            },
+            style: {
+                file: 'icons/dark/file.svg',
+                folder_opened: 'icons/dark/folder_opened.svg',
+                folder_closed: 'icons/dark/folder_closed.svg',
+                caret_opened: 'icons/dark/caret_opened.svg',
+                caret_closed: 'icons/dark/caret_closed.svg',
+                rename: 'icons/dark/edit.svg',
+            },
+        };
+
+        const tree = new Tree(treeConfig);
+        tree.data(treeData);
+        tree.withMarkdownEditor(simplemde);
+        tree.init();
     </script>
-    <script src="tree.js"></script>
 </footer>
 </html>
